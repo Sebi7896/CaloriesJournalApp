@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="Rich_black">#171A21</color>
+    <color name="Paynes_gray">#617073</color>
+    <color name="Air_superiority_blue">#7A93AC</color>
+    <color name="Jordy_blue">#92BCEA</color>
+    <color name="Periwinkle">#AFB3F7</color>
+    <color name="Black">#000000</color>
+    <color name="LightGrey">#E1E1E1</color>
+    <color name="grey">#F5F5F5</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="status_good">#00ff00</color>
+    <color name="status_okay">#ffae00</color>
+    <color name="status_bad">#ff0000</color>
+    <color name="status_unknown">#454545</color>
+</resources>

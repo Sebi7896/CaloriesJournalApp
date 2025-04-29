@@ -1,0 +1,11 @@
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/iacob_sebastian_lblListHeader"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp"
+    android:paddingStart="30dp"
+    android:paddingEnd="30dp"
+    android:paddingBottom="10dp"
+    android:textColor="@android:color/black"
+    android:textSize="18sp" />

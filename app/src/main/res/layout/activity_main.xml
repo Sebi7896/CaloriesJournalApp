@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/gurau_adrian_florin_main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/gurau_adrian_florin_main_fab_back_to_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/main_back_to_top"
+        android:src="@drawable/baseline_arrow_circle_up_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="16dp"
+        android:visibility="invisible"
+        app:elevation="1dp" />
+
+    <ScrollView
+        android:id="@+id/gurau_adrian_florin_main_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".MainActivity">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/gurau_adrian_florin_main_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="60dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+                <TextView
+                    android:id="@+id/gurau_adrian_florin_main_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/main_title"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    android:layout_gravity="center"/>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/gurau_adrian_florin_main_fab_reset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/main_reset_data"
+                    app:icon="@drawable/baseline_delete_forever_24"
+                    app:iconGravity="textStart"
+                    android:layout_gravity="end"
+                    android:paddingHorizontal="0dp" />
+            </androidx.appcompat.widget.Toolbar>
+
+            <TextView
+                android:id="@+id/gurau_adrian_florin_main_tv_currentDate"
+                android:layout_width="match_parent"
+                android:minHeight="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="@color/Air_superiority_blue"
+                android:textColor="@color/Rich_black"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="8dp"
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@id/gurau_adrian_florin_main_toolbar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+            <LinearLayout
+                android:id="@+id/gurau_adrian_florin_main_ll_exercises"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="100dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@id/gurau_adrian_florin_main_tv_currentDate"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/gurau_adrian_florin_main_ll_meals"
+                app:layout_constraintBottom_toBottomOf="@id/gurau_adrian_florin_main_ll_meals">
+                <TextView
+                    android:id="@+id/gurau_adrian_florin_main_tv_exercises"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:background="@color/Air_superiority_blue"
+                    android:textColor="@color/Rich_black"
+                    android:text="@string/main_exercises_journal"
+                    android:textSize="20sp"
+                    android:minHeight="80dp"/>
+                <ImageButton
+                    android:id="@+id/gurau_adrian_florin_main_ib_exercises"
+                    android:layout_width="match_parent"
+                    android:padding="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:minHeight="100dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_sports_gymnastics_24"
+                    android:background="@color/Air_superiority_blue"
+                    android:contentDescription="@string/main_exercises_button" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/gurau_adrian_florin_main_ll_meals"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="100dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@id/gurau_adrian_florin_main_tv_currentDate"
+                app:layout_constraintStart_toEndOf="@id/gurau_adrian_florin_main_ll_exercises"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/gurau_adrian_florin_main_ll_exercises">
+                <TextView
+                    android:id="@+id/gurau_adrian_florin_main_tv_meals"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/Air_superiority_blue"
+                    android:textColor="@color/Rich_black"
+                    android:text="@string/main_meals_journal"
+                    android:textSize="20sp"
+                    android:minHeight="80dp"
+                    android:gravity="center"/>
+                <ImageButton
+                    android:id="@+id/gurau_adrian_florin_main_ib_meals"
+                    android:layout_width="match_parent"
+                    android:minHeight="100dp"
+                    android:padding="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_kitchen_24"
+                    android:background="@color/Air_superiority_blue"
+                    android:contentDescription="@string/main_meals_button" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/gurau_adrian_florin_main_tv_stats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="60dp"
+                app:layout_constraintTop_toBottomOf="@id/gurau_adrian_florin_main_ll_exercises"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="@string/main_stats"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:background="@color/Air_superiority_blue"
+                android:textColor="@color/Rich_black"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="16dp" />
+
+            <LinearLayout
+                android:id="@+id/gurau_adrian_florin_main_ll_stats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/gurau_adrian_florin_main_tv_stats"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:gravity="center"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="16dp"
+                android:minHeight="200dp"
+                />
+
+            <View
+                android:id="@+id/gurau_adrian_florin_main_vw_bottom_delimiter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="80dp"
+                app:layout_constraintTop_toBottomOf="@id/gurau_adrian_florin_main_ll_stats"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
